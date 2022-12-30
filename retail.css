@@ -1,0 +1,13 @@
+.imgbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+}
+.retail img{
+    margin: 5rem;
+   width: 25rem;
+   height: 25rem;
+   border-radius: 20px;
+}

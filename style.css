@@ -200,6 +200,17 @@ section{
 
 .about .row .image img{ 
     width: 100%;
+
+    align-self: center;
+    border-radius: 2.5rem;  
+    box-shadow: 0 2px 6px rgba(65,11,16,.15);
+}
+.owner-image img{
+    width: 40%;
+    height: 80%;
+    flex:1 1 35rem;
+    padding:1rem;
+    align-self: center;
     border-radius: 2.5rem;  
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
