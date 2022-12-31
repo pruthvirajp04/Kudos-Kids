@@ -15,6 +15,7 @@
     <!--  css file link  -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./retail.css">
+    <link rel="stylesheet" href="./img-slider.css">
 <link rel="shortcut icon" href="./images/kudos-logo.png" type="image/x-icon">
 </head>
 <body>
@@ -75,27 +76,71 @@
 </br>
 <section class="service" id="service">
 
-    <h1 class="heading"> Our <span>Products</span> </h1>
+    <h1 class="heading"> Our <span>Products</span>  </h1>
+    <div class="sub-heading">
+    <h2 class="slide-heading">
+     
 
-    <div class="box-container">
+            Click on next to see different products
+  
+    </h2> 
+    <h2 class="slide-heading">
+     
 
-        <section class="home" id="home">
+       Hover to zoom on products
 
-        
-        
-            <div class="swiper-container home-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/img101.jpeg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/img102.jpeg" alt=""></div>
-                    <div class="swiper-slide"><img src="images/img103.jpeg" alt=""></div>
-                    <!-- <div class="swiper-slide"><img src="images/img104.jpeg" alt=""></div> -->
-                    <!-- <div class="swiper-slide"><img src="images/img008.jpeg" alt=""></div> -->
-                    <!-- <div class="swiper-slide"><img src="images/slide-6.jpg" alt=""></div> -->
-                </div>
+</h2> 
+<h2 class="slide-heading-career">
+     
+
+  1) This is our baby career
+
+</h2> 
+    </div>
+  
+
+    <div class="">
+
+        <div class="slideshow-container geeks">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 4</div>
+              <img src="images/img100.jpeg" style="width:100%" class="slide-img">
+
+              <div class="text">Kudos Kids</div>
             </div>
             
-        
-        </section>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/img101.jpeg" style="width:100%" class="slide-img">
+
+
+              <div class="text">Blue</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 4</div>
+              <img src="images/img102.jpeg" style="width:100%" class="slide-img">
+
+              <div class="text">Black</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/img103.jpeg" style="width:100%" class="slide-img">
+  
+                <div class="text">Orange</div>
+              </div>
+            
+            <a class="prev links" onclick="plusSlides(-1)" >❮</a>
+            <a class="next links" onclick="plusSlides(1)" >❯</a>
+            
+            </div>
+            <br>
+            
+            
+           
+            
+     
         
         <!-- <div class="box">
             <i class="fas fa-"></i>
@@ -197,13 +242,15 @@
 </div>
 <div class="row">
 
- 
-
- <div class="content retail">
-    <h3>Our Retail Partners</h3>
-    <div class="imgbox">
-        <img src="./images/img007.jpeg" alt="">
-        <img src="./images/img008.jpeg" alt="">
+    <div class="content" style="text-align: center;">
+        <h3>Our Retail Partners</h3>
+        <div class="owner-image">
+            <img src="./images/img007.jpeg" alt="">
+        </div>
+        <div class="owner-image">
+            <img src="./images/img008.jpeg" alt="">
+        </div>
+        
     </div>
  
 
@@ -505,11 +552,9 @@
             <a href="#about"> <i class="fas fa-arrow-right"></i> about </a>
             <a href="#review"> <i class="fas fa-arrow-right"></i> reivews </a>
             <a href="#contact"> <i class="fas fa-arrow-right"></i> contact </a>
-            <!-- <a href="#"> <i class="fas fa-arrow-right"></i> courses </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> cheatsheets </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> roadmap </a> -->
+            
         </div>
-
+       
         <div class="box">
             <h3>contact info</h3>
             <a href="mailto:kudoskids2010@gmail.com"> <i class="fas fa-envelope"></i> kudoskids2010@gmail.com</a>
@@ -546,3 +591,31 @@
 
 </body>
 </html>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>

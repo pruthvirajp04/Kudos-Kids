@@ -313,7 +313,7 @@ section{
 
 .reivew .box{
     border-radius: .5rem;
-    background: rgb(176, 7, 228);
+    background: rgb(176, 7, 228);   
     padding:2rem;
     position: relative;
 }

@@ -1,0 +1,16 @@
+body {
+  background-image:linear-gradient(to right,#4286f4 0%,#373B44 100%);
+  background-size:150% auto;
+  animation:bg 1500ms ease-in-out infinite;
+  animation-direction:alternate;
+}
+@keyframes bg{
+  from {
+    /*background-position:100% 0;*/
+    background-size:150% auto;
+  }
+  to {
+    /*background-position:102% 0;*/
+    background-size:170% auto;
+  }
+}
