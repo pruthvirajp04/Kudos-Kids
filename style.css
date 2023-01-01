@@ -406,7 +406,7 @@ section{
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap:1.5rem;
+    gap:2rem;
 }
 
 .footer .box-container .box h3{
@@ -578,4 +578,10 @@ section{
         width: 100%;
     }
 
+}
+#kudosinfo{
+    display: block;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: rgb(255, 255, 255);
 }
