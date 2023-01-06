@@ -1,82 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./slider1.js"></script>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: top;
-}
-
-.gallery {
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+.main{
   display: flex;
-  margin: 10px auto;
-  max-width: 600px;
-  position: relative;
-  padding-top: 66.6666666667%;
+  flex-direction: column;
+  align-items: center;
 }
-@media screen and (min-width: 600px) {
-  .gallery {
-    padding-top: 400px;
-  }
-}
-.gallery__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.gallery__thumb {
-  padding-top: 6px;
-  margin: 6px;
-  display: block;
-}
-.gallery__selector {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-}
-.gallery__selector:checked + .gallery__img {
-  opacity: 1;
-}
-.gallery__selector:checked ~ .gallery__thumb > img {
-  box-shadow: 0 0 0 3px #0be2f6;
-}
-</style>
+  </style>
 </head>
 <body>
-  
-  
-    <section class="gallery">
-      <div class="gallery__item">
-        <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
-        <img class="gallery__img" src="https://picsum.photos/id/1015/600/400.jpg" alt=""/>
-        <label for="img-1" class="gallery__thumb"><img src="https://picsum.photos/id/1015/150/100.jpg" alt=""/></label>
-      </div>
-      <div class="gallery__item">
-        <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
-        <img class="gallery__img" src="https://picsum.photos/id/1039/600/400.jpg" alt=""/>
-        <label for="img-2" class="gallery__thumb"><img src="https://picsum.photos/id/1039/150/100.jpg" alt=""/></label>
-      </div>
-      <div class="gallery__item">
-        <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
-        <img class="gallery__img" src="https://picsum.photos/id/1057/600/400.jpg" alt=""/>
-        <label for="img-3" class="gallery__thumb"><img src="https://picsum.photos/id/1057/150/100.jpg" alt=""/></label>
-      </div>
-      <div class="gallery__item">
-        <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
-        <img class="gallery__img" src="https://picsum.photos/id/106/600/400.jpg" alt=""/>
-        <label for="img-4" class="gallery__thumb"><img src="https://picsum.photos/id/106/150/100.jpg" alt=""/></label>
-      </div>
-    </section>
-    
-</body>
+  <div class="main">
+    <div><img src="./images//img202.jpeg" alt=""> </div>
+    <div><img src="./images//img202.jpeg" alt=""> </div>
+    <div><img src="./images//img202.jpeg" alt=""> </div>
 
+  </div>
 </body>
-</html> 
+</html>

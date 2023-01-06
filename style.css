@@ -2,18 +2,34 @@
 
 
 :root{
-    --main-color:#7d00a3;
+    --main-color:#faafba;
 }
 
 *{
     font-family: 'Poppins', sans-serif;
     margin:0; padding:0;
     box-sizing: border-box;
-    outline: none; border:none;
+    /* outline: none;  */
+    /* border:none; */
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
 }
+.slideContainer{
+    border: 2px solid red;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btnSlide{
+    width: 10rem;
+    height: 4rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    margin: 1rem;
+
+}
+
 
 html{
     font-size: 62.5%;
@@ -57,7 +73,7 @@ section{
 }
 
 .btn{
-    margin-top: 1rem;
+    margin: 1rem;
     display: inline-block;
     padding:.8rem 3rem;
     font-size: 1.7rem;
@@ -206,11 +222,11 @@ section{
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
 .owner-image img{
-    width: 40%;
-    height: 80%;
-    flex:1 1 35rem;
+    width: 60rem;
+    height: 40rem;
+    margin: 2rem;
+    /* flex:1 1 35rem; */
     padding:1rem;
-    align-self: center;
     border-radius: 2.5rem;  
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
@@ -493,6 +509,13 @@ section{
     font-size: 3rem;
     animation: spin 4s linear infinite;
 }
+
+.btnSlide:hover{
+   background-color: black;
+   color: wheat;
+
+}
+  
 
 @keyframes spin {
     0%{
