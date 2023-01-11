@@ -222,7 +222,7 @@ section{
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
 .owner-image img{
-    width: 60rem;
+    width: 80%;
     height: 40rem;
     margin: 2rem;
     /* flex:1 1 35rem; */
@@ -510,12 +510,7 @@ section{
     animation: spin 4s linear infinite;
 }
 
-.btnSlide:hover{
-   background-color: black;
-   color: wheat;
 
-}
-  
 
 @keyframes spin {
     0%{
