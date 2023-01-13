@@ -12,7 +12,7 @@
     /* outline: none;  */
     /* border:none; */
     text-decoration: none;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: .2s linear;
 }
 .slideContainer{
@@ -74,6 +74,7 @@ section{
 
 .btn{
     margin: 1rem;
+    margin-left: 3rem;
     display: inline-block;
     padding:.8rem 3rem;
     font-size: 1.7rem;
@@ -399,7 +400,7 @@ section{
 .contact form .inputBox input::placeholder,
 .contact form textarea::placeholder{
     color:#eee;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
 }
 
 .contact form .inputBox input:focus,
