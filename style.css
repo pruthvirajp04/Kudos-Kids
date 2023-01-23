@@ -54,7 +54,9 @@ html::-webkit-scrollbar-thumb{
 body{
     background: #eeeeee;
 }
-
+#top {
+	position: relative;
+}
 section{
     padding:2rem 9%;
 }
