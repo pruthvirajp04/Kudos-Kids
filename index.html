@@ -5,20 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kudos Kids</title>
+    <script src="https://example.com/fontawesome/v5.15.4/js/all.js" data-auto-a11y="true" ></script>
+
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="shortcut icon" href="./images/kudos-logo.png.crdownload" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/kudos.png.crdownload" type="image/x-icon">
 
-    <!--  css file link  -->
+    <script src="jquery-3.6.1.min.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" href="./images/kudos-logo.png" type="image/x-icon">
 <link rel=”stylesheet” href=”https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I” crossorigin=”anonymous”>
 <script src="https://www.w3schools.com/lib/w3.js"></script>
-<link rel="stylesheet" href="slider.css">
+<link rel="stylesheet" href="./hamburger.css">
+<script src="./scrollup.js"></script>
 <style>
+ 
      * {box-sizing: border-box;}
       body {font-family: Verdana, sans-serif;}
       .mySlides {display: none;}
@@ -96,6 +102,7 @@
 <!-- header section starts  -->
 
 <header class="header">
+  
     <div>
 
         <img src="./images/kudos-logo.png" alt="" style="width: 8rem; height: 5rem;">
@@ -114,8 +121,23 @@
         <a href="#gallery">roadmap</a>
         <a href="#price">courses</a> -->
     </nav>
+    <div class="topnav">
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+    
 
-    <div id="menu-bars" class="fas fa-bars"></div>
+         
+       
+        <div id="myLinks">
+            <a href="#home">home</a>
+            <a href="#service">Our Products</a>
+            
+            <a href="#about">about</a>
+            <a href="#review">review</a>
+            <a href="#contact">contact</a>
+        </div>
+    </div>
 
 </header>
 
@@ -524,6 +546,8 @@
 
 <!-- review section starts  -->
 
+<a href="#" class="top" id="goTop"><i class="fas fa-arrow-up"></i></a>
+
 <section class="reivew" id="review"> 
 </br>
 </br>
@@ -586,7 +610,7 @@
         <textarea name="" placeholder="your message" id="" cols="30" rows="10" name = "message"></textarea required>
         <input type="submit" value="send message" class="btn">
     </form>
-
+    
 </section>
 
 <!-- contact section ends -->
