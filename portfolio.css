@@ -1,0 +1,220 @@
+/* Mobile-first approach */
+html {
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+}
+/* body {
+  background-color: #0a1124;
+  box-sizing: border-box;
+  color: snow;
+  font: 300 1.1rem/1.65 "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+} */
+
+body *,
+body *:before,
+body *:after {
+  box-sizing: inherit;
+}
+img {
+  border: 0;
+  display: block; /* collapse top and bottom margins */
+  max-width: 100%;
+}
+.section {
+  padding: 16px 20px;
+}
+.container {
+  margin: 0 auto;
+  max-width: 560px;
+}
+.gallery {
+  padding-bottom: 10px;
+  text-align: center;
+}
+.gallery-heading {
+  color: #00d6c8;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin-top: 0;
+  position: relative;
+  padding-bottom: 8px;
+}
+.gallery-heading::after {
+  content: "";
+  background-color: currentColor;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  width: 100px;
+}
+.gallery-grid {
+  background: #283048;
+  background: linear-gradient(to right, #355460, #283048);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: minmax(200px, -webkit-max-content);
+  grid-auto-rows: minmax(200px, max-content);
+  grid-auto-flow: dense;
+  gap: 10px;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.gallery-item img {
+  cursor: pointer;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 40rem;
+  height: 35rem;
+}
+
+.gallery-item-text {
+  display: none;
+}
+
+/*******************************
+       .lightbox styles
+*******************************/
+.lightbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  z-index: 10;
+}
+
+/* .preload will be removed by JS code during DOMContentLoaded event. This is done to avoid lightbox transition appearing on page load. */
+.lightbox.preload {
+  transition: none !important;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox .lb-content {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em;
+  max-height: 90%;
+  padding: 1rem;
+  position: relative;
+}
+
+.lightbox .lb-img {
+  -o-object-fit: contain;
+  object-fit: contain;
+  /* margin-bottom: 8px; */
+  display: block;
+  width: 100%;
+  height: 30rem;
+}
+
+.lightbox .lb-caption {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  max-width: 50ch;
+  overflow-y: auto; /* may occur in smartphones */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lightbox.open .lb-caption {
+  opacity: 1;
+}
+
+.lightbox .lb-url {
+  color: #005fa9;
+  text-decoration: underline;
+  text-underline-position: under;
+  padding-top: 8px;
+  padding-bottom: 14px;
+}
+
+.lightbox .close {
+  background-color: lightgray;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1em;
+  text-align: center;
+  position: absolute;
+  top: -0.4em;
+  right: -0.4em;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+/* Lightbox overlay */
+.lightbox .close::before {
+  background-color: rgba(0, 0, 0, 0.9);
+  content: "";
+  cursor: default;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/**********************************
+          Media queries
+ **********************************/
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .lightbox .lb-caption {
+    font-size: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 1024px and up) */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+  }
+  .lightbox .lb-content {
+    flex-direction: row;
+  }
+
+  .lightbox .lb-img {
+    margin-bottom: 0;
+  }
+
+  .lightbox .lb-caption {
+    padding: 0 1.5em;
+  }
+  .lightbox .lb-url {
+    padding-top: 0;
+  }
+}

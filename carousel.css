@@ -1,0 +1,113 @@
+:Root{
+    --White-C: #Fff;
+    --Black-C: #000;
+    --Body-Background-C: #FD7AC0;
+    --Wrapper-Background-C: #D4F1F4;
+    --Wrapper-Shadow-C: Rgba(0, 0, 0, 0.219);
+    --Buttons-Background-C: Rgba(255, 255, 255, 0.219);
+    --Buttons-Active-Background-C: Rgba(135, 207, 235, 0.493);
+  }
+  *{
+    Margin: 0;
+    Padding: 0;
+    Box-Sizing: Border-Box;
+  }
+  
+  /* End Main Rules */
+  
+  /* Wrapper */
+  .Wrapper{
+    Width: 600px;
+    Height: 300px;
+    Position: Relative;
+    Background-Color: Var(--Wrapper-Background-C);
+    Box-Shadow: 0 0 80px Var(--Wrapper-Shadow-C);
+  }
+  
+  /* Images Area */
+  .Images-Area{
+    Width: 100%;
+    Height: 100%;
+    Position: Relative;
+    Display: Flex;
+    Overflow: Hidden;
+  }
+  .Images-Area Img{
+    Width: 100%;
+    Transition: 0.3s Cubic-Bezier(.79,.03,0,.99);
+  }
+  
+  /* Buttons Area  */
+  .Buttons-Area{
+    Width: 100%;
+    Position: Absolute;
+    Top: 50%;
+    Left: 0;
+    Transform: TranslateY(-50%);
+    Display: Flex;
+    Justify-Content: Space-Between;
+    Overflow: Hidden;
+  }
+  .Buttons-Area > Div{
+    Color: Var(--White-C);
+    Background-Color: Var(--Buttons-Background-C);
+    Cursor: Pointer;
+    Transition: 0.3s Ease-In-Out;
+  }
+  /* Buttons | Previous And Next */
+  .Buttons-Area > Div:first-Child{
+    Border-Radius: 0 5px 5px 0;
+    Margin-Left: -100px;
+  }
+  .Buttons-Area > Div:last-Child{
+    Border-Radius: 5px 0 0 5px;
+    Margin-Right: -100px;
+  }
+  /* Show The Buttons */
+  .Wrapper:hover .Buttons-Area > Div:first-Child{
+    Margin-Left: 0;
+  }
+  .Wrapper:hover .Buttons-Area > Div:last-Child{
+    Margin-Right: 0;
+  }
+  .Buttons-Area Div:hover:not(Div.Disabled){
+    Background-Color: Var(--Buttons-Active-Background-C);
+  }
+  .Buttons-Area Div:not(Div.Disabled):Active{
+    Opacity: 0.7;
+  }
+  /* Disabled Button */
+  .Buttons-Area > Div.Disabled{
+    Cursor: No-Drop;
+    Opacity: 0.3;
+  }
+  .Buttons-Area Div I{
+    Font-Size: 70px;
+  }
+  
+  /* Pagination Area */
+  .Pagination-Area{
+    Position: Absolute;
+    Top: 90%;
+    Left: 50%;
+    Transform: Translate(-50%, -50%);
+    Pointer-Events: None;
+  }
+  /* Pagination Spans */
+  .Pagination-Area Span{
+    Display: Inline-Block;
+    Width: 10px;
+    Height: 10px;
+    Border-Radius: 50%;
+    Background-Color: Var(--White-C);
+    Margin-Right: 5px;
+    Transform: Scale(0.5);
+    Transition: 0.3s Ease-In-Out;
+    Opacity: 0.4;
+  }
+  /* Current Active Span */
+  .Pagination-Area Span.Active{
+    Transform: Scale(1);
+    Opacity: 1;
+  }
+  
