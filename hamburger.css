@@ -1,5 +1,5 @@
 
-  @media  (min-width: 180px) and ( (max-width: 680px) ) {
+  @media  (min-width: 180px) and ( (max-width: 767px) ) {
     
     .topnav {
       /* overflow: hidden; */
@@ -37,7 +37,7 @@
       color: white;
     }
   }
-  @media  (min-width: 680px) {
+  @media  (min-width: 767px) {
     .topnav{
       display: none;
     }
