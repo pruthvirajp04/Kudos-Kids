@@ -1,75 +1,71 @@
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
 
-
-/* Styling the area of the slides */
-
-#slideshow {
-  overflow: hidden;
-  height: 510px;
-  width: 728px;
-  margin: 0 auto;
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  /* border: 2px solid red; */
 }
 
-/* Style each of the sides
-with a fixed width and height */
-
-.slide {
-  float: left;
-  height: 510px;
-  width: 728px;
-}
-.slide img{
-      width: 100%;
-      height: 40rem;
-  }
-/* Add animation to the slides */
-
-.slide-wrapper {
-  
-  /* Calculate the total width on the
-basis of number of slides */
-  width: calc(728px * 4);
-  
-  /* Specify the animation with the
-duration and speed */
-  animation: slide 10s ease infinite;
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-/* Set the background color
-of each of the slides */
-
-.slide:nth-child(1) {
-  /* background: green; */
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
 }
 
-.slide:nth-child(2) {
-  /* background: pink; */
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.slide:nth-child(3) {
-  /* background: red; */
+.active {
+  background-color: #717171;
 }
 
-.slide:nth-child(4) {
-  /* background: yellow; */
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
-/* Define the animation
-for the slideshow */
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
 
-@keyframes slide {
-  
-  /* Calculate the margin-left for
-each of the slides */
-  20% {
-    margin-left: 0px;
-  }
-  40% {
-    margin-left: calc(-728px * 1);
-  }
-  60% {
-    margin-left: calc(-728px * 2);
-  }
-  80% {
-    margin-left: calc(-728px * 3);
-  }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.mySlides img{
+  width: 80rem;
+  height: 40rem;
 }
