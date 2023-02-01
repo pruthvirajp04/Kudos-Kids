@@ -75,7 +75,7 @@ img {
   cursor: pointer;
   -o-object-fit: cover;
   object-fit: cover;
-  width: 40rem;
+  width: 100%;
   height: 35rem;
 }
 
@@ -118,7 +118,7 @@ img {
   justify-content: center;
   margin: 1em;
   max-height: 90%;
-  padding: 1rem;
+  /* padding: 1rem; */
   position: relative;
 }
 
@@ -212,7 +212,7 @@ img {
   }
 
   .lightbox .lb-caption {
-    padding: 0 1.5em;
+    /* padding: 0 1.5em; */
   }
   .lightbox .lb-url {
     padding-top: 0;
