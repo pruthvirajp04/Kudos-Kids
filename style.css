@@ -221,11 +221,19 @@ section{
     border-radius: 2.5rem;  
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
+.owner-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .owner-image img{
-    width: 80%;
-    height: 40rem;
-    margin: 2rem;
+    /* width: 80%; */
+    /* height: 40rem; */
+    /* margin: 2rem; */
     /* flex:1 1 35rem; */
+    width: 40rem;
+    height: 30rem;
     padding:1rem;
     border-radius: 2.5rem;  
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
