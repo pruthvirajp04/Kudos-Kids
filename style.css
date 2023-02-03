@@ -240,7 +240,10 @@ section{
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
 .owner-text{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    /* text-align: center; */
 }
 .about .row .content{
     flex:1 1 45rem;
