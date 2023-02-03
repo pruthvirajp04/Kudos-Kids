@@ -221,16 +221,17 @@ section{
     border-radius: 2.5rem;  
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
+
 .owner-image{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 .owner-image img{
     /* width: 80%; */
     /* height: 40rem; */
-    /* margin: 2rem; */
+    margin: 2rem;
     /* flex:1 1 35rem; */
     width: 40rem;
     height: 30rem;
@@ -238,7 +239,9 @@ section{
     border-radius: 2.5rem;  
     box-shadow: 0 2px 6px rgba(65,11,16,.15);
 }
-
+.owner-text{
+    text-align: center;
+}
 .about .row .content{
     flex:1 1 45rem;
 }
@@ -536,6 +539,7 @@ section{
 
 
 /* media queries  */
+
 
 @media (max-width:991px){
 
