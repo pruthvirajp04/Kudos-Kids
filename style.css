@@ -542,7 +542,9 @@ section{
 
 
 @media (max-width:991px){
-
+.owner-image{
+    flex-direction: column;
+}
     html{
         font-size: 55%;
     }
