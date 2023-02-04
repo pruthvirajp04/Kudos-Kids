@@ -69,3 +69,12 @@ img {vertical-align: middle;}
   width: 80rem;
   height: 40rem;
 }
+@media (min-width:1200px)
+{
+  .slideshow-container {
+width: 110rem;
+  }
+  #carouselid{
+    margin-right: 60rem;
+  }
+}
