@@ -69,7 +69,7 @@ img {vertical-align: middle;}
   width: 80rem;
   height: 40rem;
 }
-@media (min-width:1200px)
+@media (min-width:1200px) and (max-width:1800px)
 {
   .slideshow-container {
 width: 110rem;
